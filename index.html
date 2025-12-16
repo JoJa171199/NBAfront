@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat con Nuestro Bot de Telegram</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¡Conéctate con Nuestro Bot!</h1>
+        <p>Haz clic en el botón de abajo para empezar a chatear directamente con nuestro servicio automatizado.</p>
+
+        <a id="telegram-link" href="https://t.me/TuUsernameDeBot" target="_blank" class="button">
+            🤖 Abrir Chat de Telegram
+        </a>
+
+        <h2>O escanea el código QR:</h2>
+        <div id="qrcode"></div>
+        <p class="small-text">Escanea con la cámara de tu teléfono.</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
