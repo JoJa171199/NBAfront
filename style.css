@@ -1,53 +1,121 @@
+/* PALETA DE COLORES (Inspirada en la NBA) */
+:root {
+    --color-primary: #FF5A00; /* Naranja Brillante / Rojo de Acento */
+    --color-secondary: #E3E3E3; /* Blanco roto para texto principal */
+    --color-background-dark: #1A1A1A; /* Negro profundo, pero suave */
+    --color-text-light: #FFFFFF; /* Texto en botones y titulares */
+    --color-highlight: #0088CC; /* Azul de Telegram para diferenciador */
+}
+
+/* ESTILOS GLOBALES */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Fuente audaz y moderna */
+    background-color: var(--color-background-dark);
+    color: var(--color-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    line-height: 1.6;
+    padding: 20px;
 }
 
 .container {
-    background: white;
-    padding: 40px;
+    background: #252525; /* Contraste sutil con el fondo */
+    padding: 50px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     text-align: center;
-    max-width: 450px;
-    width: 90%;
+    max-width: 500px;
+    width: 95%;
+    border-top: 5px solid var(--color-primary); /* Borde superior de acento */
+}
+
+/* TIPOGRAFÍA */
+h1, h2, h3 {
+    font-weight: 900; /* Extra bold, estilo deportivo */
+    margin-top: 0;
+    letter-spacing: 1px; /* Espaciado para mejorar legibilidad en mayúsculas */
 }
 
 h1 {
-    color: #0088CC; /* Color de Telegram */
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    color: var(--color-secondary);
+    line-height: 1.1;
+    margin-bottom: 5px;
 }
 
+h2 {
+    font-size: 1.6rem;
+    color: var(--color-text-light);
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--color-primary);
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: #AAAAAA;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: var(--color-primary);
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: -5px;
+}
+
+.accent-text {
+    color: var(--color-highlight); /* Usamos el azul de Telegram para este detalle */
+}
+
+/* BOTÓN DE ACCIÓN (CTA) */
 .button {
-    display: inline-block;
-    background-color: #0088CC;
-    color: white;
-    padding: 15px 30px;
+    display: block;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 18px 35px;
     text-decoration: none;
     border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 20px 0;
-    transition: background-color 0.3s;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 30px auto;
+    width: fit-content;
+    box-shadow: 0 4px 15px rgba(255, 90, 0, 0.4); /* Sombra que hace que 'flote' */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .button:hover {
-    background-color: #006699;
+    background-color: #CC4800; /* Oscurece al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 90, 0, 0.6);
 }
 
-#qrcode {
+/* CÓDIGO QR */
+.qr-container {
     display: flex;
     justify-content: center;
-    margin: 25px 0;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: var(--color-text-light); /* Fondo blanco para el QR */
+    border-radius: 8px;
+    width: 200px; /* Tamaño fijo para el contenedor del QR */
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .small-text {
-    font-size: 0.9em;
-    color: #666;
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 15px;
 }
