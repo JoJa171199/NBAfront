@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (telegramLink) {
         new QRCode(document.getElementById("qrcode"), {
             text: telegramLink,
-            width: 200,
-            height: 200,
+            width: 180, /* Ligeramente más pequeño para el nuevo diseño */
+            height: 180,
             colorDark : "#000000",
-            colorLight : "#ffffff",
+            colorLight : "#FFFFFF", /* Fondo blanco para el QR */
             correctLevel : QRCode.CorrectLevel.H
         });
     }
